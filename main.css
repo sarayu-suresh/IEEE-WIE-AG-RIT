@@ -329,10 +329,11 @@ label.exelabel {
 @media screen and (max-width:640px) {
     body {
         overflow-x: hidden;
+        width: 100%;
     }
     /* ----------nav bar------------ */
     img.logo {
-        width: 25%;
+        width: 30%;
     }
     ul.topnav {
         margin: 0px;
