@@ -156,7 +156,7 @@ img.logo {
     padding: 0 2rem 2rem;
     margin: auto;
     display: inline;
-    width: 18%;
+    width: 15%;
     margin-top: 20px;
 }
 
@@ -199,6 +199,7 @@ div.box-event {
 div.quote {
     margin-left: 100px;
     margin-right: 100px;
+    margin-top: 100px;
 }
 
 div.icon img {
@@ -331,7 +332,7 @@ label.exelabel {
     }
     /* ----------nav bar------------ */
     img.logo {
-        width: 30%;
+        width: 25%;
     }
     ul.topnav {
         margin: 0px;
@@ -393,6 +394,7 @@ label.exelabel {
     div.mobile {
         width: 100%;
         display: block;
+        overflow-x: hidden;
     }
     footer.footsy ul {
         list-style: none;
