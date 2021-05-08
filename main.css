@@ -1,0 +1,415 @@
+/*##### DEFAULTS #######*/
+
+nav,
+header,
+footer {}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1;
+    margin: 0;
+    background-color: #2f4454;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: rgb(245, 240, 240);
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /*wrap the elements when required*/
+    align-items: center;
+    /*helps in centering the elements in flex containers*/
+}
+
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+
+/*--------------------------------------------- block-$ ---------------------------------------*/
+
+.block-effect {
+    font-size: calc(6px + 2vw);
+}
+
+.block-reveal {
+    --t: calc(var(--td) + var(--d));
+    color: transparent;
+    padding: 4px;
+    position: relative;
+    overflow: hidden;
+    animation: revealBlock 0s var(--t) forwards;
+}
+
+.block-reveal::after {
+    content: '';
+    color: #fff;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--bc);
+    animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+
+
+/* ---------------animations------------------------------- */
+
+@keyframes revealBlock {
+    100% {
+        color: #ffffff;
+        font-family: 'Berkshire Swash', cursive;
+    }
+}
+
+@keyframes revealingIn {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes revealingOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+/*############################### NAV BAR ##########################################*/
+
+nav {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    background-color: #2f4454;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+ul.topnav li {
+    list-style: none;
+    float: left;
+}
+
+ul.topnav li.topnav-right {
+    list-style: none;
+    float: right;
+    margin-top: 70px;
+}
+
+ul.topnav li a {
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+ul.topnav li a:hover {
+    color: rgb(255, 255, 255);
+    background-color: hsla(330, 94%, 51%, 0.185);
+    border-radius: 10px;
+}
+
+ul.topnav li.dropdownicon {
+    display: none;
+}
+
+img.logo {
+    padding: 0 2rem 2rem;
+    margin: auto;
+    display: inline;
+    width: 18%;
+    margin-top: 20px;
+}
+
+
+/*################################## CUSTOM STYLES ########################################*/
+
+div.box {
+    background-color: #543c962f;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, .15), 10px 12px 7px 0 rgba(0, 0, 0, .14);
+    border-radius: 7px;
+    text-align: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px 20px 20px 20px;
+}
+
+div.box-exe {
+    background-color: hsla(0, 100%, 100%, 0.514);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, .15), 10px 12px 7px 0 rgba(0, 0, 0, .14);
+    border-radius: 7px;
+    text-align: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 40px 40px 40px 40px;
+}
+
+div.box-event {
+    background-color: hsla(0, 100%, 100%, 0.514);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, .15), 10px 12px 7px 0 rgba(0, 0, 0, .14);
+    border-radius: 7px;
+    text-align: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 30px 20px 20px 20px;
+}
+
+div.quote {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+div.icon img {
+    width: 70%;
+    border: 2px solid rgba(255, 255, 255, 0.363);
+    padding: 5px;
+}
+
+div.event img {
+    height: 180px;
+    width: 200px;
+    padding: 5px;
+}
+
+header h1.sec2header {
+    font-size: 35px;
+    text-align: center;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+div.icon2 img {
+    width: 55%;
+    display: block;
+    margin: auto;
+}
+
+
+/* --------Footer---------- */
+
+footer.footsy {
+    /* background-color: rgb(168, 102, 196); */
+    background-color: hsla(330, 94%, 51%, 0.185);
+    padding: 5%;
+    text-align: center;
+}
+
+footer.footsy label {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+footer.footsy ul {
+    list-style: none;
+    text-align: center;
+}
+
+footer.footsy ul li {
+    font-size: 18px;
+    color: white;
+    line-height: 1.5;
+}
+
+footer.footsy ul li a {
+    font-size: 18px;
+    color: white;
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+footer.footsy ul li a:hover {
+    color: rgb(26, 22, 22);
+    background-color: hsla(310, 100%, 30%, 0.3);
+}
+
+
+/* ------------------------------------------------- */
+
+p.owner {
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+p.about {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p.exe {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p.event {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label.eventlabel {
+    color: rgb(17, 17, 17);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+label.exelabel {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 25px;
+}
+
+.view {
+    background-color: #270a585b;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    height: 45px;
+    width: 180px;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+
+/*##### MOBILE #######*/
+
+@media screen and (max-width:680px) {
+    body {
+        overflow-x: hidden;
+    }
+    /* ----------nav bar------------ */
+    img.logo {
+        width: 30%;
+    }
+    ul.topnav {
+        margin: 0px;
+    }
+    ul.topnav li {
+        display: none;
+    }
+    ul.topnav li.dropdownicon {
+        display: block;
+        float: right;
+        margin-top: 45px;
+        height: 30px;
+        margin-right: 30px;
+    }
+    ul.topnav.responsive li.dropdownicon {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    ul.topnav.responsive {
+        position: relative;
+    }
+    ul.topnav.responsive li {
+        display: inline;
+        /*placing elements like lined up*/
+        float: none;
+    }
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+        background-color: #2f4454;
+    }
+    /* -----------quote------------- */
+    div.quote {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    div.icon2 img {
+        width: 40%;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+    }
+    /* ----------boxes-------------- */
+    .box {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+    .box-exe {
+        display: block;
+        width: 100%;
+    }
+    div.event {
+        width: 100%;
+        display: block;
+    }
+    /* ------footer------- */
+    div.mobile {
+        width: 100%;
+        display: block;
+    }
+    footer.footsy ul {
+        list-style: none;
+        text-align: center;
+    }
+    footer.footsy ul li {
+        font-size: 15px;
+        color: white;
+    }
+    footer.footsy ul li a {
+        font-size: 15px;
+        color: white;
+        line-height: 1.5;
+        text-decoration: none;
+    }
+    .block-effect {
+        font-size: calc(8px + 3vw);
+        margin-top: 5px;
+    }
+}
